@@ -8,19 +8,25 @@ Usage:
 def main():
     # Step 2: Create a complex data structure that holds information about me
     about_me = {
-        # TODO: Put full name into data structure
-        # TODO: Put student ID into data structure
-        # TODO: Put list of 3 pizza toppings into data structure
+        'name': 'Ethan Watts',
+        'studentID': '10262692',
+        'pizza toppings': [
+            'bacon',
+            'pepperoni',
+            'olives'
+        ],
         'movies': [
-            # TODO: Change this to a movie you like
             {
-                'title': 'The empire strikes back',
-                'genre': 'sci-fi'
+                'title': 'Fight Club',
+                'genre': 'Thriller',
             },
-            # TODO: Add one more movie
+            {
+                'title': 'V for Vendetta',
+                'genre': 'Action',
+            }
         ]
     }
-
+    
     # Step 3: Print student name and ID
     print_student_name_and_id(about_me)
 
@@ -49,28 +55,13 @@ def print_student_name_and_id(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 3
-    my_info = {
-        'name': 'Ethan Watts',
-        'studentID': '10262692',
-        'pizza toppings': [
-            'bacon',
-            'pepperoni',
-            'olives'
-        ],
-        'movies': [
-            {
-                'title': 'Fight Club',
-                'genre': 'Thriller',
-            },
-            {
-                'title': 'V for Vendetta',
-                'genre': 'Action',
-            }
-        ]
-    }
+
+    full_name = my_info['name'].split()
+    first_name = full_name[0]
     # Print sentence containing name
+    print(F"My name is {my_info['name']} but you can call me {first_name} ")
     # Print sentence containing student ID
-    print()
+    print(F"My student ID is {my_info['studentID']}")
 
 def print_pizza_toppings(my_info):
     """Prints a bullet list of favourite pizza toppings
@@ -80,8 +71,10 @@ def print_pizza_toppings(my_info):
     """
     # TODO: Complete function body per Step 4
     # Print header "My favourite pizza toppings are:"
+    print("My favourite pizza toppings are: ")
     # Print bullet list of favourite pizza toppings
-    print()
+    for topping in my_info['pizza toppings']:
+        print(f"- {topping}")
 
 def add_pizza_toppings(my_info, toppings):
     """Adds some pizza toppings to the list of favourites
