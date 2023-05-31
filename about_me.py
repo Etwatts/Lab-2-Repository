@@ -117,7 +117,9 @@ def print_movie_genres(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 7
-    print()
+    movie_list = my_info['movies']
+    movie_genres = [movie['genre'] for movie in movie_list]
+    print("My favourite movies genre's are: "+ ", ".join(movie_genres))
 
 def print_movie_titles(movie_list):
     """Prints a sentence listing all favourite movie titles
@@ -126,6 +128,10 @@ def print_movie_titles(movie_list):
         movie_list (list): List of favourite movies
     """
     # TODO: Complete function body per Step 8
+    movie_titles = [movie['title'] for movie in movie_list]
+    print ("My favourite movies are: "+ ", ".join(movie_titles))
+  
+
 
 if __name__ == '__main__':
     main()
