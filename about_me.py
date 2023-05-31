@@ -40,7 +40,7 @@ def main():
 
     # Step 6: Add another movie to the data structure
     # Change to a movie you like
-    add_movie(about_me, 'taxi driver', 'Psycological Thriller')
+    add_movie(about_me, 'taxi driver', 'psycological thriller')
 
     # Step 7: Print a comma-separated list of movie genres
     print_movie_genres(about_me)
